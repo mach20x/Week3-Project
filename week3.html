@@ -1,0 +1,612 @@
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+
+
+  <meta property="og:image" id="meta-og-image" content="https://hrcdn.net/og/default.jpg"><meta property="og:url" content="https://www.hackerrank.com/dashboard"><meta property="og:site_name" content="HackerRank"><meta property="og:type" id="meta-og-type" content="website"><meta property="article:author" content="https://www.facebook.com/hackerrank"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@hackerrank"><meta name="twitter:url" content="https://www.hackerrank.com/dashboard"><meta property="fb:app_id" content="347499128655783"><meta content="authenticity_token" name="csrf-param" id="csrf-param"><meta content="Rs/XX+dabt2synVjGFegW+Gw3Hu3FMnnO3cV7tsF5pKWPEfc9tB/FfrgNfCfk7XpYSIUWSKUqwk1TwywVwbgbg==" name="csrf-token" id="csrf-token">
+
+
+<script>
+  //track cdn related matrices
+  (function() {
+    var allCdns = ["hrcdn.net"];
+
+    var metrics = [];
+    // var defaultCdn = Cookies.get('default_cdn_url');
+    //
+    // //method to track the events
+    // function appTrack(key, attrs) {
+    //   attrs = attrs || {};
+    //   attrs.uid = Cookies.get('hackerrank_mixpanel_token')
+    //   metrics.push({
+    //     'key': key,
+    //     'meta_data': attrs
+    //   });
+    // }
+    //
+    // function sendMetrices() {
+    //   if (!XMLHttpRequest) return;
+    //   var xhr = new XMLHttpRequest();
+    //   var metrics_endpoint = 'https://metrics.hackerrank.com/app_metrics'; // Todo : this need to move on configuration
+    //
+    //   if (!xhr) return;
+    //
+    //   xhr.open("POST", metrics_endpoint, true);
+    //
+    //   //set xhr headers and options
+    //   xhr.setRequestHeader('Content-Type', 'application/json');
+    //   xhr.withCredentials = true;
+    //
+    //   xhr.send(JSON.stringify({
+    //     data: metrics,
+    //     default_cdn_url: defaultCdn,
+    //     document_referrer: document.referrer
+    //   }));
+    // }
+    //
+    // var cdnUrl = Cookies.get('cdn_url');
+    // var failedCdns = Cookies.get('failed_cdn_hosts');
+    //
+    // var cdnMetrices = {};
+    //
+    // //track used cdn host
+    // if (cdnUrl) {
+    //   cdnMetrices['used-cdn'] = cdnUrl;
+    //   cdnMetrices['cdn-index'] = allCdns.indexOf(cdnUrl) + 1;
+    //   cdnMetrices['all-failed'] = false;
+    // //track if all cdn failed (If cdnUrl is not set it means all cdn url failed)
+    // } else {
+    //   cdnMetrices['used-cdn'] = '';
+    //   cdnMetrices['cdn-index'] = 999;
+    //   cdnMetrices['all-failed'] = true;
+    // }
+    //
+    // appTrack('cdn-metrices', cdnMetrices);
+    //
+    // //track failed cdn
+    // if (failedCdns) {
+    //   failedCdns = JSON.parse(failedCdns);
+    //   Cookies.remove('failed_cdn_hosts');
+    //   failedCdns.forEach(function(cdn) {
+    //     appTrack('failed-cdn-host', {
+    //       cdn: cdn
+    //     });
+    //   });
+    // }
+    //
+    // //send metrics
+    // sendMetrices();
+
+  }());
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" type="text/css" href="week3.css">
+<link rel="dns-prefetch" href="//hrcdn.net">
+<link rel="dns-prefetch" href="//d3keuzeb2crhkn.cloudfront.net">
+<link rel="dns-prefetch" href="//notifications.hackerrank.com">
+<link rel="dns-prefetch" href="//api.mixpanel.com">
+<link rel="dns-prefetch" href="//heapanalytics.com">
+<link rel="dns-prefetch" href="//metrics.hackerrank.com">
+
+
+<!-- Load promise polyfill for the non-believers -->
+<script>
+  window.Promise || document.write('<script src="https://hrcdn.net/hackerrank/assets/promise-polyfill/promise.min-6441a8739281da98ea4e511b5e96b7c2.js" type="text\/javascript"><\/script>');
+</script>
+
+<!-- Prefetch old assets -->
+
+  <link rel="prefetch" href="https://hrcdn.net/hackerrank/assets/hackerrank-dcc3b93cd9c09913fed68ebe86024bd6.js">
+
+  <link rel="prefetch" href="https://hrcdn.net/hackerrank/assets/base-9c1fbd41eaf488758b4fbd25af7ffaee.js">
+
+  <link rel="prefetch" href="https://hrcdn.net/hackerrank/assets/hackerrank_libraries-813aa59d90d24615b794a2edc1bfcbc8.js">
+
+<!-- Prefetch old assets end-->
+
+<!-- preload scripts required on the same page -->
+
+  <!-- <link rel="preload" as="script" href="https://hrcdn.net/hackerrank/assets/hackerrank_r_community-fe19d1934f9b06927e30.js"> -->
+
+<!-- preload scripts end -->
+
+<link href="https://hrcdn.net/hackerrank/assets/hackerrank_libraries-b9d818d09dac5a02e22ba53622ae0db4.css" media="all" rel="stylesheet"><link rel="stylesheet" href="https://hrcdn.net/hackerrank/assets/hackerrank_libraries-b9d818d09dac5a02e22ba53622ae0db4.css"><link rel="stylesheet" href="https://hrcdn.net/hackerrank/assets/hackerrank_libraries-b9d818d09dac5a02e22ba53622ae0db4.css">
+
+<link href="https://hrcdn.net/hackerrank/assets/hackerrank-core-e4770600ef9149004a36b432b6223ab3.css" media="all" rel="stylesheet">
+
+
+  <link href="https://hrcdn.net/hackerrank/assets/dashboard-d5be922e6d6b7b974c0fb3de032b0ee8.css" media="all" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="https://hrcdn.net/hackerrank/assets/hackerrank_r_app-eeb90c8aef.css">
+<link rel="stylesheet" href="https://hrcdn.net/hackerrank/assets/hackerrank_r_community-fdeea7d00d.css">
+
+
+</head>
+<body id="hr_v2">
+
+  <div id="fb-root"></div>
+  <div id="content" onclick="void(0);">
+    <div class="body-wrap  community-page domains-page domainchallengelist-page" data-reactroot="" data-reactid="1" data-react-checksum="-2144917832">
+      <div class="component-wrapper">
+        <div>
+          <div class="page-header-wrapper">
+            <nav class="page-header">
+              <div class="container">
+                <div class="nav-links header-nav-links">
+                  <ul class="pull-left nav-links-active">
+                    <li>
+                      <a class="nav_link backbone logo_mark js_logo_mark" data-analytics="NavBarLogo" href="/dashboard">
+                        <img id="feed-intro" src="https://hrcdn.net/hackerrank/assets/brand/h_mark_sm-2b74ffcaf85d7091a6301c30d6c411c5.svg" alt="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav_link backbone contests" data-analytics="NavBarContests" href="/contests">
+                        <i class="icon-clock"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav_link backbone" data-analytics="NavBarLeaderboard" id="leaderboard-nav-link" href="/leaderboard">
+                        <i class="icon-trophy"></i>
+                      </a>
+                      <li>
+                        <a class="icon--grey" data-analytics="ChallengeSubmissions" rel="tooltip" data-tip="Challenge Submissions" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string/submissions" currentitem="false">
+                          <i class="icon-list-bullet-small icon--single"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="cursor backbone nav_link hr_nav_messages_link js-dropdown-toggle js-link" data-analytics="NavBarMessageIcon">
+                          <i class="icon-chat icon--single"></i>
+                        </a>
+                      </li>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-buttons">
+                  <ul class="pull-left psR">
+                    <li class="hide-in-private-contest search-input-container input-icon main-hr-search" id="search-span">
+                      <div class="search_form">
+                        <div class="hide-in-private-contest search-input input-icon">
+                          <div class="search-query asyn-autocomplete autocomplete">
+                            <div class="ac-input-wrap cf">
+                              <input autocomplete="off" class="ac-input " value="">
+                            </div>
+                          </div>
+                          <i class="icon-search"></i>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="pull-left nav-wrap mmL">
+                    <li class="hide-in-private-contest button-item">
+                      <div class="dropdown notify_dropdown dropdown">
+                        <a class="cursor backbone nav_link hr_nav_messages_link js-dropdown-toggle js-link" data-analytics="NavBarMessageIcon">
+                          <i class="icon-chat icon--single"></i>
+                        </a>
+                        <div class="dropdown-menu large">
+                          <header class="psT psB text-center"><strong>Messages</strong></header>
+                          <div id="notify_messages" class="dropdown-body">
+                            <div class="hr_nav_messages_list">
+                              <div class="no-propagation text-center txt-navy" style="padding: 30px 0px; font-size: 16px;">You have no unread messages.</div>
+                            </div>
+                          </div>
+                          <footer class="final text-center">
+                            <a class="btn backbone" href="/inbox" data-analytics="NavBarMessageShowAll">Show All</a>
+                          </footer>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="button-item">
+                      <div class="dropdown dropdown notify_dropdown">
+                        <a class="cursor backbone nav_link hr_nav_notifications_link js-dropdown-toggle js-link" data-toggle="dropdown" data-analytics="NavBarNotificationsIcon">
+                          <i class="icon-megaphone icon--single"></i>
+                        </a>
+                        <div class="dropdown-menu large" id="notify_broadcasts">
+                          <header class="psA"><strong>Notifications</strong>
+                            <a class="hr_archive_all pull-right js-link" data-analytics="NavBarNotificationsArchiveAll">
+                              <i class="icon-folder-open"></i>
+                              <!-- react-text: 7647 -->
+                              Archive All
+                              <!-- /react-text -->
+                            </a>
+                          </header>
+                          <div class="clearfix dropdown-body">
+                            <div class="hr_nav_notifications_list">
+                              <ul>
+                                <li class="notify_item" data-id="48749168" data-category="contest-announcements" data-url="/domains/tutorials/30-days-of-code">
+                                  <div class="notification-icon">
+                                    <img src="https://hrcdn.net/hackerrank/assets/forum_mailer/notifymarker.png">
+                                  </div>
+                                  <div class="notification-subject pmT">
+                                    <div class="psA">
+                                      <div>Improve your coding skills. Join our 30 Days of Code challenge!</div>
+                                      <small class="meta">
+                                        <time datetime="2017-10-07T15:58:38.000Z" title="2017-10-07 15:58">1 day ago</time>
+                                      </small>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <footer class="final">
+                            <a class="btn backbone" href="/notifications" data-analytics="NavBarNotificationsShowAll">Show All</a>
+                          </footer>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="button-item">
+                      <div class="dropdown dropdown dropdown-auth profile-menu">
+                        <a class="backbone nav_link js-dropdown-toggle js-link" href="" data-analytics="NavBarProfileDropDown">
+                          <img src="https://d3rpyts3de3lx8.cloudfront.net/hackerrank/assets/gravatar.jpg" alt="" class="avatar">
+                          <span class="mmR username text-ellipsis">Elou</span>
+                          <i class="icon-down-open"></i>
+                        </a>
+                        <div class="dropdown-menu drop-list pull-right">
+                          <ul>
+                            <li class="hide-in-private-contest">
+                              <a class="navigation_hackos backbone" href="/Elou/hackos" data-analytics="NavBarProfileDropDownHackos">
+                                <!-- react-text: 7671 -->Hackos: <!-- /react-text -->
+                                <span class="navigation_hackos-count">106</span>
+                              </a>
+                            </li>
+                            <li class="hide-in-private-contest">
+                              <a class="backbone" rel="tooltip" data-placement="left" data-analytics="NavBarProfileDropDownProfile" href="/mach20x">
+                                <!-- react-text: 7675 -->Profile<!-- /react-text -->
+                                <span class="progress-wrapper">
+                                  <span class="progress-bar" style="width: 30%;"></span>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="hide-in-private-contest">
+                              <a class="backbone" href="/settings" data-analytics="NavBarProfileDropDownSettings">Settings</a>
+                            </li>
+                            <li class="hide-in-private-contest">
+                              <a class="backbone" href="/network" data-analytics="NavBarProfileDropDownNetwork">Network</a>
+                            </li>
+                            <li class="hide-in-private-contest">
+                              <a class="backbone" href="/submissions" data-analytics="NavBarProfileDropDownSubmissions">Submissions</a>
+                            </li>
+                            <li class="hide-in-private-contest">
+                              <a class="backbone" href="/administration" data-analytics="NavBarProfileDropDownAdministration">Administration</a>
+                            </li>
+                            <li>
+                              <a class="logout-button js-link" data-analytics="NavBarProfileDropDownLogout">Logout</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <!-- react-empty: 7688 -->
+          <div id="breadcrumb">
+            <div class="content-header b4">
+              <div class="container pjL">
+                <div class="clearfix">
+                  <ol itemtype="http://schema.org/BreadcrumbList" class="pull-left mdT msB pjT bcrumb">
+                    <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                      <a itemprop="item" class="backbone" data-analytics="Breadcrumb" data-attr1="Algorithms" data-attr2="global" data-attr7="1" href="/domains/algorithms">
+                        <span itemprop="name">Algorithms</span>
+                      </a>
+                      <meta itemprop="position" content="1">
+                    </li>
+                  </ol>
+                  <div class="pull-right domain-scores">
+                    <div class="pull-left badge-progress">
+                      <span class="zeta bold">Rating: </span><br>
+                      <span class="bold msR domain-rating">O(LogN)</span>
+                    <div class="pull-right badge-progress">
+                      <div id="badge-progress" class="mlR js-tooltip ">
+                        <span class="domain-rank-span">
+                        <span class="zeta bold">Rank: </span>
+                        <br>
+                        <span class="bold msR domain-rank ">153</span>
+                      </span>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="pull-right">
+                      <span class="zeta bold">Score: </span>
+                      <br>
+                      <span class="bold domain-score msR">2733.34</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container"></div>
+          <div class="clearfix">
+            <div class="container transition challenge-container">
+              <div class="row">
+                <div class="span12 track_contentList react_var pjR pull-left">
+                  <div>
+                    <div class="topbar-inner mlT plT plB pull-left">
+                      <h4 class="inline"><!-- react-text: 7732 -->Strings<!-- /react-text --><!-- react-text: 7733 --> Challenges<!-- /react-text --></h4>
+                    </div>
+                    <div class="">
+                      <div class="dropdown whole-dropdown psL mjT pmT pull-left">
+                        <div class="dropdown-handle challenges-filter-image-outter psL psR msR pmB filter-image-border" rel="tooltip" data-tip="Challenge Filters" currentitem="false">
+                          <a class="cursor challenges-filter-click">
+                            <div class="challenges-filter-image"></div>
+                          </a>
+                        </div>
+                        <div class="dropdown-body challenges-filter-menu">
+                          <div class="challenges-filter-margin-div"></div>
+                          <div class="challenges-filter-drop-down formgroup">
+                            <div class="challenges-filter mdT mdL mdR radio">
+                              <p class="zeta">Difficulty</p>
+                              <div>
+                                <input type="radio" id="difficulty-all" class="hr-sleek-input" name="difficulty" value="on">
+                                <label for="difficulty-all" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7748 -->All<!-- /react-text -->
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="difficulty-easy" class="hr-sleek-input" name="difficulty" value="on">
+                                <label for="difficulty-easy" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7753 -->Easy<!-- /react-text -->
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="difficulty-medium" class="hr-sleek-input" name="difficulty" value="on">
+                                <label for="difficulty-medium" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7758 -->Medium<!-- /react-text -->
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="difficulty-hard" class="hr-sleek-input" name="difficulty" value="on">
+                                <label for="difficulty-hard" class="no-margin cursor">
+                                  <span>
+                                  </span><!-- react-text: 7763 -->Hard<!-- /react-text -->
+                                </label>
+                              </div>
+                            </div>
+                            <div class="challenges-filter mdT mdL mdR radio">
+                              <p class="zeta">Status</p>
+                              <div>
+                                <input type="radio" id="status-all" class="hr-sleek-input" name="status" value="on">
+                                <label for="status-all" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7770 -->All<!-- /react-text -->
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="status-solved" class="hr-sleek-input" name="status" value="on">
+                                <label for="status-solved" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7775 -->Solved<!-- /react-text -->
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="status-unsolved" class="hr-sleek-input" name="status" value="on">
+                                <label for="status-unsolved" class="no-margin cursor">
+                                  <span></span><!-- react-text: 7780 -->Unsolved<!-- /react-text -->
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="challenges-list">
+                      <div class="challenges-list-view mdB">
+                        <div id="contest-challenges-problem" class="individual-challenge-card content--list track_content">
+                          <div class="content--list_body">
+                            <header class="content--list_header row">
+                              <div class="span12">
+                                <h4 class="challengecard-title pull-left msB">
+                                  <a class="js-track-click" data-analytics="ChallengeListChallengeName" data-js-track="Challenge-Title" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string">Flowers</a>
+                                </h4>
+                                <span><span class="saved-text txt-alt-grey xsmall mmL">Saved!</span></span>
+                              </div>
+                              <ul class="span3 pull-right inline challenge_links">
+                                <li>
+                                  <a class="submit icon--grey" data-analytics="ViewForum" rel="tooltip" data-tip="Challenge Discussion" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string/forum" currentitem="false">
+                                    <i class="icon-comment icon--single"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="submit icon--grey" data-analytics="ChallengeLeaderboard" rel="tooltip" data-tip="Challenge Leaderboard" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string/leaderboard" currentitem="false">
+                                    <i class="icon-trophy icon--single"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="icon--grey" data-analytics="ChallengeSubmissions" rel="tooltip" data-tip="Challenge Submissions" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string/submissions" currentitem="false">
+                                    <i class="icon-list-bullet-small icon--single"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </header>
+                            <p> "Lorem ipsum dolor sit amet, consectatur adipisicing elit, sed do eiusmod temmpor incididunt ut labore et dolore magna aliqua"</p>
+                          </div>
+                          <footer class="track_content-footer clearfix">
+                            <div class="small bold mdT pull-left">
+                              <span class="msR"><span class="zeta">Submissions: </span>
+                              <span class="js-tooltip cursor" data-place="right" data-html="true" data-tip="Solved: 48976 <br/>Attempted: 56001" currentitem="false">123</span>
+                            </span>
+                            <span class="msR">
+                              <span class="zeta">Max Score: </span>20</span><span class="msR">
+                                <span class="zeta">Difficulty: </span>Easy</span>
+                              </div>
+                              <div>
+                                <a data-slug="reduced-string" class="btn btn-primary start pull-right js-track-click" data-analytics="SolveChallenge" data-js-track="Solve Challenge" data-attr1="reduced-string" data-attr3="code" data-attr7="10" data-attr-10="0.9" href="/challenges/reduced-string">View Challenge</a>
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                        <div class="challenges-list-view mdB">
+                          <div id="contest-challenges-problem" class="individual-challenge-card content--list track_content">
+                            <div class="content--list_body">
+                              <header class="content--list_header row">
+                                <div class="span12">
+                                  <h4 class="challengecard-title pull-left msB">
+                                    <a class="js-track-click" data-analytics="ChallengeListChallengeName" data-js-track="Challenge-Title" data-attr1="camelcase" data-attr3="code" data-attr7="15" data-attr-10="0.9">Lonely Integer</a>
+                                  </h4>
+                                  <span><i class="icon-ok js-icon-ok pull-left msL xsmall "></i>
+                                    <span>Solved!</span>
+                                    <span class="saved-text txt-alt-grey xsmall mmL">Saved!</span>
+                                  </span>
+                                </div>
+                                <ul class="span3 pull-right inline challenge_links">
+                                  <li>
+                                    <a class="submit icon--grey" data-analytics="ViewForum" rel="tooltip" data-tip="Challenge Discussion" data-attr1="camelcase" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/camelcase/forum" currentitem="false">
+                                      <i class="icon-comment icon--single"></i>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="submit icon--grey" data-analytics="ChallengeLeaderboard" rel="tooltip" data-tip="Challenge Leaderboard" data-attr1="camelcase" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/camelcase/leaderboard" currentitem="false">
+                                      <i class="icon-trophy icon--single"></i>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="icon--grey" data-analytics="ChallengeSubmissions" rel="tooltip" data-tip="Challenge Submissions" data-attr1="camelcase" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/camelcase/submissions" currentitem="false">
+                                      <i class="icon-list-bullet-small icon--single"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </header>
+                              <p> "Lorem ipsum dolor sit amet, consectatur adipisicing elit, sed do eiusmod temmpor incididunt ut labore et dolore magna aliqua"</p>
+                            </div>
+                            <footer class="track_content-footer clearfix">
+                              <div class="small bold mdT pull-left">
+                                <span class="msR"><span class="zeta">Submissions:&nbsp;</span>
+                                <span class="js-tooltip cursor" data-place="right" data-html="true" data-tip="Solved: 89104 <br/>Attempted: 90912" currentitem="false">123</span>
+                              </span>
+                              <span class="msR"><span class="zeta">Max Score: </span>
+                              <!-- react-text: 7852 -->20<!-- /react-text -->
+                            </span>
+                            <span class="msR"><span class="zeta">Difficulty: </span>
+                            <!-- react-text: 7855 -->Easy<!-- /react-text -->
+                          </span>
+                        </div>
+                        <div>
+                          <a data-slug="camelcase" class="btn btn-primary start pull-right js-track-click" data-analytics="SolveChallenge" data-js-track="Solve Challenge" data-attr1="camelcase" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/camelcase">View Challenge</a>
+                        </div>
+                      </footer>
+                    </div>
+                  </div>
+                  <div class="challenges-list-view mdB">
+                    <div id="contest-challenges-problem" class="individual-challenge-card content--list track_content">
+                      <div class="content--list_body">
+                        <header class="content--list_header row">
+                          <div class="span12">
+                            <h4 class="challengecard-title pull-left msB">
+                              <a class="js-track-click" data-analytics="ChallengeListChallengeName" data-js-track="Challenge-Title" data-attr1="two-characters" data-attr3="code" data-attr7="20" data-attr-10="0.9" href="/challenges/two-characters">Encyption</a>
+                            </h4>
+                            <span><span class="saved-text txt-alt-grey xsmall mmL">Saved!</span></span>
+                          </div>
+                          <ul class="span3 pull-right inline challenge_links">
+                            <li>
+                              <a class="submit icon--grey" data-analytics="ViewForum" rel="tooltip" data-tip="Challenge Discussion" data-attr1="two-characters" data-attr3="code" data-attr7="20" data-attr-10="0.9" href="/challenges/two-characters/forum" currentitem="false">
+                                <i class="icon-comment icon--single"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="submit icon--grey" data-analytics="ChallengeLeaderboard" rel="tooltip" data-tip="Challenge Leaderboard" data-attr1="two-characters" data-attr3="code" data-attr7="20" data-attr-10="0.9" href="/challenges/two-characters/leaderboard" currentitem="false">
+                                <i class="icon-trophy icon--single"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="icon--grey" data-analytics="ChallengeSubmissions" rel="tooltip" data-tip="Challenge Submissions" data-attr1="two-characters" data-attr3="code" data-attr7="20" data-attr-10="0.9" href="/challenges/two-characters/submissions" currentitem="false">
+                                <i class="icon-list-bullet-small icon--single">
+                                </i>
+                              </a>
+                            </li>
+                          </ul>
+                        </header>
+                        <p> "Lorem ipsum dolor sit amet, consectatur adipisicing elit, sed do eiusmod temmpor incididunt ut labore et dolore magna aliqua"</p>
+                      </div>
+                      <footer class="track_content-footer clearfix">
+                        <div class="small bold mdT pull-left">
+                          <span class="msR"><span class="zeta">Submissions:&nbsp;</span>
+                          <span class="js-tooltip cursor" data-place="right" data-html="true" data-tip="Solved: 12091 <br/>Attempted: 16927" currentitem="false">123</span>
+                        </span>
+                        <span class="msR"><span class="zeta">Max Score: </span>
+                        <!-- react-text: 7886 -->20<!-- /react-text -->
+                      </span>
+                      <span class="msR"><span class="zeta">Difficulty: </span>
+                      <!-- react-text: 7889 -->Easy<!-- /react-text -->
+                    </span>
+                  </div>
+                  <div>
+                    <a data-slug="two-characters" class="btn btn-primary start pull-right js-track-click" data-analytics="SolveChallenge" data-js-track="Solve Challenge" data-attr1="two-characters" data-attr3="code" data-attr7="20" data-attr-10="0.9" href="/challenges/two-characters">View Challenge</a>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="challenges-list-view mdB">
+              <div id="contest-challenges-problem" class="individual-challenge-card content--list track_content">
+                <div class="content--list_body">
+                  <header class="content--list_header row">
+                    <div class="span12">
+                      <h4 class="challengecard-title pull-left msB">
+                        <a class="js-track-click" data-analytics="ChallengeListChallengeName" data-js-track="Challenge-Title" data-attr1="caesar-cipher-1" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/caesar-cipher-1">Find the Median</a>
+                      </h4>
+                      <span>
+                        <i class="icon-ok js-icon-ok pull-left msL xsmall "></i>
+                        <span>Solved!</span>
+                      </span>
+                    </div>
+                    <ul class="span3 pull-right inline challenge_links">
+                      <li>
+                        <a class="submit icon--grey" data-analytics="ViewForum" rel="tooltip" data-tip="Challenge Discussion" data-attr1="caesar-cipher-1" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/caesar-cipher-1/forum" currentitem="false">
+                          <i class="icon-comment icon--single"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="submit icon--grey" data-analytics="ChallengeLeaderboard" rel="tooltip" data-tip="Challenge Leaderboard" data-attr1="caesar-cipher-1" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/caesar-cipher-1/leaderboard" currentitem="false">
+                          <i class="icon-trophy icon--single"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon--grey" data-analytics="ChallengeSubmissions" rel="tooltip" data-tip="Challenge Submissions" data-attr1="caesar-cipher-1" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/caesar-cipher-1/submissions" currentitem="false">
+                          <i class="icon-list-bullet-small icon--single"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </header>
+                  <p> "Lorem ipsum dolor sit amet, consectatur adipisicing elit, sed do eiusmod temmpor incididunt ut labore et dolore magna aliqua"</p>
+                </div>
+                <footer class="track_content-footer clearfix">
+                  <div class="small bold mdT pull-left">
+                    <span class="msR"><span class="zeta">Submissions:&nbsp;</span>
+                    <span class="js-tooltip cursor" data-place="right" data-html="true" data-tip="Solved: 46759 <br/>Attempted: 55448" currentitem="false">123</span>
+                  </span>
+                  <span class="msR"><span class="zeta">Max Score: </span>
+                  <!-- react-text: 7920 -->20<!-- /react-text -->
+                </span>
+                <span class="msR"><span class="zeta">Difficulty: </span>
+                <!-- react-text: 7923 -->Easy<!-- /react-text -->
+              </span>
+            </div>
+            <div>
+              <a data-slug="caesar-cipher-1" class="btn btn-primary start pull-right js-track-click" data-analytics="SolveChallenge" data-js-track="Solve Challenge" data-attr1="caesar-cipher-1" data-attr3="code" data-attr7="15" data-attr-10="0.9" href="/challenges/caesar-cipher-1">View Challenge</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="span4">
+  <div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<footer class="page_footer">
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
